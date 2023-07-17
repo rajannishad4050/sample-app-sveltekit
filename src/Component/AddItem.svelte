@@ -33,7 +33,7 @@
 	};
 </script>
 
-<div class="add-items border-2 bg-slate-700 absolute z-10 px-20 py-10">
+<div class="add-items border-2 bg-slate-700 absolute z-10 px-20 py-10 pb-20">
 	<div
 		class="cancel text-white flex justify-end cursor-pointer"
 		on:click={() => (addItemActive = false)}
