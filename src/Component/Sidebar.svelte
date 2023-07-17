@@ -75,6 +75,7 @@
 		left: -40%;
 		transition: 0.3s ease-in-out;
 		padding-inline: 20px;
+		z-index: 100;
 	}
 
 	.Active {
