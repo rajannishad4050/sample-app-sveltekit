@@ -4,6 +4,7 @@
 	export let data;
 	export let loading;
 	export let errorHappened;
+	let clickme = false;
 </script>
 
 {#if data === null && loading === false && errorHappened === false}
@@ -17,8 +18,13 @@
 {:else}
 	<div class="main-grid px-20 py-14">
 		{#each data as item}
-			<div class="card cursor-pointer">
+			<div class="card cursor-pointer relative">
 				<a href={'/' + item.idDrink}>
+					<p
+						class="click-me absolute top-[40%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-amber-400 text-2xl font-bold hidden transition-all"
+					>
+						Click me!
+					</p>
 					{#if item.strDrinkThumb === ''}
 						<img
 							class="card-img"
@@ -41,6 +47,10 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		gap: 1.5rem;
+	}
+
+	.card:hover .click-me {
+		display: block;
 	}
 
 	.card-img {
