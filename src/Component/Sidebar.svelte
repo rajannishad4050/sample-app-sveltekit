@@ -10,7 +10,7 @@
 		sessionStorage.clear();
 		loading = true;
 		try {
-			const response = await fetch('https:thecocktaildb.com/api/json/v1/1/filter.php?a=' + type);
+			const response = await fetch('https://thecocktaildb.com/api/json/v1/1/filter.php?a=' + type);
 			if (!response.ok) {
 				throw new Error('Failed to fetch data');
 				errorHappened = true;
